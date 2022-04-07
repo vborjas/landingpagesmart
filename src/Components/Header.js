@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ParticlesBg from "particles-bg";
+
 import Fade from "react-reveal";
 import Login from "./Login"
 
@@ -8,13 +8,13 @@ class Header extends Component {
     if (!this.props.data) return null;
 
     
-    const github = this.props.data.github;
+  
     const name = this.props.data.name;
     const description = this.props.data.description;
 
     return (
       <header id="home">
-       {/* <ParticlesBg type="circle" bg={true} ></ParticlesBg> */}
+      
        
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -43,13 +43,7 @@ class Header extends Component {
               </a>
             </li>
 
-            {/* <li>
-              <a className="smoothscroll" href="#portfolio">
-                Contactatenos
-              </a>
-            </li> */}
-
-            <li>
+              <li>
               <a className="smoothscroll" href="#contact">
               Contactatenos
               </a>

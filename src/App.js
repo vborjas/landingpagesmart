@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Login from "./Components/Login"
 import Contact from "./Components/Contact";
+import Finalizo from "./Components/Finalizo"
 
 
 class App extends Component {
@@ -45,11 +46,10 @@ class App extends Component {
       <div className="App">
         <Header data={this.state.resumeData.main} />
         <About data={this.state.resumeData.main} />
-       <Login data={this.state.resumeData.main} />
-        {/* <Resume data={this.state.resumeData.resume} /> */}
-        {/* <Portfolio data={this.state.resumeData.portfolio} /> */}
+        <Login data={this.state.resumeData.main} />
         <Contact data={this.state.resumeData.main} />
         <Footer data={this.state.resumeData.main} />
+        <Finalizo data={this.state.resumeData.main} />
       </div>
     );
   }

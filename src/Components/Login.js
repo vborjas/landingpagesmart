@@ -12,13 +12,14 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { height, width } from '@mui/material/node_modules/@mui/system';
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography variant='body2' align="center"  {...props} >
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://mui.com/" sx={{fontFamily:'opensans-regular', fontSize:'14px', }}>
+       Smart Talent
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -33,41 +34,47 @@ export default function SignIn() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
+      
       email: data.get('email'),
       password: data.get('password'),
     });
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
+    <ThemeProvider theme={theme}  >
+      <Container  maxWidth="xs" className='containerlogin'>
+        
         <Box
           sx={{
+           
             marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-   
+          <Avatar sx={{ m: 3, width: '200px', height: '180px', backgroundColor: 'ActiveBorder' }}>
+            <img src='./images/SmartTalent.png' width={'180px'} ></img>
           </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign in
+          <Typography sx={{fontFamily:'opensans-bold', fontSize:'20px'}}>
+          Iniciar Sesión
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 2, }}  >
+            <TextField 
+            sx={{backgroundColor:'#1abc9c', height:'65px',  }}
+           
+           
               margin="normal"
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Email"
               name="email"
               autoComplete="email"
+              
               autoFocus
             />
-            <TextField
+            <TextField  sx={{backgroundColor:'#1abc9c', height:'65px', }}
               margin="normal"
               required
               fullWidth
@@ -76,30 +83,32 @@ export default function SignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
+             
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Recordar Contraseña"
             />
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, 
+                width: '300px', 
+                height: '40px', 
+                borderRadius: '10px' , 
+                fontSize: '14px',
+                fontFamily: 'opensans-regular', }}
             >
-              Sign In
+              Iniciar Sesión
             </Button>
-            <Grid container>
+            <Grid container >
               <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
+                <Link href="#" sx={{fontFamily:'opensans-regular', fontSize:'13px'}}>
+                Has olvidado tu contraseña?
                 </Link>
               </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
+           
             </Grid>
           </Box>
         </Box>

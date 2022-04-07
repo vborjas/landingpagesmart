@@ -37,7 +37,7 @@ class About extends Component {
            
               <h2>Quienes Somos</h2>
 
-              <p>{bio}</p>
+              <p className="">{bio}</p>
           </div>
               <h2>Desarrollado por:</h2>
               <br />
