@@ -82,7 +82,7 @@ header .banner-text h1 {
 }
 
 header .banner-text h3 {
-   font: 20px/1.9em 'opensans-regular',sans-serif;
+   font: 18px/1.9em 'opensans-regular',sans-serif;
    color: #ddd;
    margin: 0 auto;
    width: 70%;
@@ -160,7 +160,7 @@ header .scrolldown a:hover {
 
 /* nav-wrap */
 #nav-wrap {
-   font: 16px 'opensans-bold', sans-serif;
+   font: 15px 'opensans-bold', sans-serif;
    width: 100%;
    text-transform: uppercase;
    letter-spacing: 2.5px;
